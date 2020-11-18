@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+				<ForestersForms>
+					<Forms_JISAApplications><Form id="323" createdate="16/10/2020 11:10:12" forestersid="JISA11610323">
+									<returnState>0</returnState>
+									<ID>323</ID><Title>Mr</Title>
+				
+									<Forename>Karn</Forename>
+									<Surname>Singh</Surname>
+									<DOB>05 January 2000</DOB>
+									<NationalInsuranceNumber>JH 68 68 68 D</NationalInsuranceNumber>
+									<AddressLine1>1234 Pershore Road</AddressLine1>
+									<AddressLine2>Stirchley</AddressLine2>
+									<Town>Birmingham</Town>
+									<County>Worcestershire</County>
+									<Postcode>B30 2YA</Postcode>
+									<PhoneDay>87987 878979</PhoneDay>
+									<Email>karn.singh@megamaxservices.com</Email>
+									<AddressChange>Have you changed address in the last 3 months?</AddressChange>
+									<AddressChangeValue>No</AddressChangeValue>
+									<PrevAddressLine1></PrevAddressLine1>
+									<PrevAddressLine2></PrevAddressLine2>
+									<PrevTown></PrevTown>
+									<PrevCounty></PrevCounty>
+									<PrevPostcode></PrevPostcode>
+									<MembershipType>JISA</MembershipType>
+									<HearAbout></HearAbout><Title>Mr</Title>
+										<Forename>Devaan</Forename>
+										<Surname>Singh</Surname>
+										<DOB>04 January 2020</DOB>
+										<NationalInsuranceNumber>    </NationalInsuranceNumber><AddressLine1>1234 Pershore Road</AddressLine1>
+										<AddressLine2>Stirchley</AddressLine2>
+										<Town>Birmingham</Town>
+										<County>Worcestershire</County>
+										<Postcode>B30 2YA</Postcode><ContributionType>Monthly</ContributionType>
+				
+										<MonthlyContributionAmount>£400</MonthlyContributionAmount>
+										
+										<TaxYear>2020/2021</TaxYear>
+										
+										<DirectDebit>True</DirectDebit>
+										
+										<AccountName>Karn</AccountName>
+										
+										<AccountNumber>89878987</AccountNumber>
+										
+										<SortCode>89-79-87</SortCode>
+										
+										<DirectDebitPaymentDate>1</DirectDebitPaymentDate>
+										
+										<IsAccountValid>True</IsAccountValid><TransferPaymentOption>Transfer in from another ISA provider</TransferPaymentOption>
+							
+											<TransferPaymentOptionSelected>Yes</TransferPaymentOptionSelected></Form>
+					</Forms_JISAApplications>
+				</ForestersForms>

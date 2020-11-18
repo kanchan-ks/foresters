@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+				<ForestersForms>
+					<Forms_LISAApplications>
+					<Form id="110181" createdate="18/11/2020 09:59:40" forestersid="FFS2011180959403928">
+									<returnState>0</returnState>
+									<ID>110181</ID>	
+									<Title>Ms</Title>
+									<Forename>kan's</Forename>
+									<Surname>sinha'</Surname>
+									<DOB>04/04/1998 00:00:00</DOB>
+									<NationalInsuranceNumber>WE232342A</NationalInsuranceNumber>
+									<AddressLine1>test'1</AddressLine1>
+									<AddressLine2>test'2</AddressLine2>
+									<Town>Aberdeen</Town>
+									<County>Aberdeenshire</County>
+									<Country>GB</Country>
+									<Postcode>AB21 9JB</Postcode>
+									<PhoneDay>23423 423423</PhoneDay>
+									<Email>kanchan@gmail.com</Email>
+									<PrevAddressLine1></PrevAddressLine1>
+									<PrevAddressLine2></PrevAddressLine2>
+									<PrevTown></PrevTown>
+									<PrevCounty></PrevCounty>
+									<PrevPostcode></PrevPostcode>
+									<MembershipType>LISA</MembershipType>
+									<HearAbout></HearAbout>
+									<PromotionalCode></PromotionalCode>
+									<TransferPaymentOption>Transfer in from another ISA provider</TransferPaymentOption>
+									<TransferPaymentOptionSelected>Yes</TransferPaymentOptionSelected>
+									<ReceivePostFromUs>Opt out</ReceivePostFromUs>
+									<ReceiveEmailFromUs>Opt out</ReceiveEmailFromUs>
+									<ReceiveSMSFromUs>Opt out</ReceiveSMSFromUs>
+									<ReceivePhoneFromUs>Opt out</ReceivePhoneFromUs>
+									<SUN>915649</SUN>
+									<AffiliateID></AffiliateID>
+									</Form>
+					</Forms_LISAApplications>
+				</ForestersForms>

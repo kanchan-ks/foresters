@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+				<ForestersForms>
+					<Forms_CTFMApplications><Form id="CTF0000006" createdate="22/10/2020 11:51:52" forestersid="CTF0000006">
+									<returnState>0</returnState>
+									<ID>CTF0000006</ID>	<Title>Miss</Title>
+									<Forename>Elaika</Forename>
+									<Surname>Birks</Surname>
+									<DOB>24 September 2003</DOB>
+									<NationalInsuranceNumber>HH 99 99 99 D</NationalInsuranceNumber>
+									<AddressLine1>1 Warren Avenue</AddressLine1>
+									<AddressLine2>Rawmarsh</AddressLine2>
+									<Town>ROTHERHAM</Town>
+									<County>South Yorkshire</County>
+									<Postcode>S62 7JF</Postcode>
+									<PhoneDay>99999 999999</PhoneDay>
+									<Email>karn.singh@megamaxservices.com</Email><MakeYourChoice>Reinvest all of your CTF</MakeYourChoice>
+				
+										<ReinvestAllLifetimeISA>£500</ReinvestAllLifetimeISA>
+										<ReinvestAllSSISA>£1,862</ReinvestAllSSISA><IDProofType>UK Passport</IDProofType>
+									<AddressProofType>UK Birth/Adoption Certificate</AddressProofType></Form>
+					</Forms_CTFMApplications>
+				</ForestersForms>

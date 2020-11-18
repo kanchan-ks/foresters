@@ -1,0 +1,775 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+@extract($d);
+
+				
+?>
+	<div class="container-fluid">
+        <div class="row">
+            <div class="title-content d-none d-md-block">
+                <h3>Stocks & Shares ISA</h3>
+            </div>
+        </div>
+    </div>
+    <div class="tabbable" id="pgbar">
+        <?=$progressbar?>
+    </div>
+    <div class="page">
+     	
+        <section id="personal_profile_section" class="your_details">
+        <form name="frmyourdetails" id="frmyourdetails" action="" method="post">
+        <input type="hidden" name="data_type" value="personal_details">
+        <input type="hidden" name="step" value="1">
+        	<div class="row progressbar mb-2">
+            	<div class="col-md-12 bg-limegreen">Your Details</div>
+            </div> 
+     	   	<div class="row">
+        	<div class="col-md-12">
+            <h3 class="head_title">Your details</h3>
+            <hr>
+                <div class="row form-row  mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Title</label></div>
+                    <div class="col-md-4">
+                    	<?=form_dropdown('title',$list_title,'','class="required form-control" placeholder="Title"')?>
+                        <input type="text" name="other_title" id="other_title" value="" class="form-control hide mt-2" placeholder='Please enter your title'>
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                
+                <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>First name</label></div>
+                    <div class="col-md-4">
+                        <input type="text" name="first_name" id="first_name" value="" class="form-control required" required autocomplete="OFF">
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                
+                <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Last name</label></div>
+                    <div class="col-md-4">
+                        <input type="text" name="last_name" id="last_name" value="" class="form-control required" required autocomplete="OFF">
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                
+                <div class="row form-row mb-2">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Date of birth</label></div>
+                    <div class="col-md-1  mb-2">
+                        <select name="dob_day" id="dob_day" class="form-control birth_day" placeholder="Day">
+                        <option value="">Day</option>
+                        <?php for($d=1; $d <= 31; $d++){
+							echo "<option value='".$d."'>".$d."</option>";
+							}
+						?>
+                        </select>
+                    </div>
+                    <div class="col-md-2  mb-2">
+						<?=form_dropdown('dob_month',$month,'','class="form-control select2 birth_day" placeholder="Month" id="dob_month"')?>
+                    </div>
+                    <div class="col-md-1  mb-2">
+                        <select name="dob_year" id="dob_year" required class="form-control select2 required birth_day"   placeholder="Year">
+                        <option value="">Year</option>
+                        <?php 
+						$back_year = date('Y', strtotime("-18 years"));
+						$last_year = date('Y', strtotime("-41 years"));
+						for($back_year; $back_year > $last_year; $back_year--){
+							echo "<option value='".$back_year."'>".$back_year."</option>";
+							}
+						?>
+                        </select>
+                    </div>
+                    <div class="col-md-5"></div>
+                    
+                    </div>
+                
+                <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>National Insurance number</label></div>
+                    <div class="col-md-4"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF"> <input type="text" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment required ni-segment-last" autocomplete="OFF" required></div>
+                    <div class="col-md-5"></div> 
+                </div>
+                <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Phone</label></div>
+                    <div class="col-md-4">
+                        <input type="text" name="phone" id="phone" value="" class="form-control required" required  autocomplete="OFF">
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Email</label></div>
+                    <div class="col-md-4">
+                        <input type="email" name="email" id="email" value="" class="form-control required" required autocomplete="OFF">
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                 <div class="row form-row mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Confirm email</label></div>
+                    <div class="col-md-4">
+                        <input type="email" name="cemail" id="cemail" value="" class="form-control required" required  autocomplete="OFF">
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                <div class="form-group">
+                	<h3>Your address</h3>
+                    <hr>
+                     <div class="row form-row mb-3">
+                        <div class="col-md-3 text-right"><label class=" font-weight-bold">Postcode</label></div>
+                        <div class="col-md-2">
+                            <input type="text" name="postcode" id="postcode" value="" class="form-control required postcode" required placeholder="Eg SO15 3EW">
+                            </div>
+                        <div class="col-md-2  text-right  no-padding">
+                            <button type="button" class="btn btn-success btn-sm find_address">Find address</button>
+                        </div>
+                        <div class="col-md-6"><span class="address-lines"></span></div> 
+                        
+                    </div>
+                    <div class="row form-row mb-3">
+                    	<div class="col-md-3"></div><div class="col-md-6">Please enter your postcode and click 'Find address'.</div><div class="col-md-3"></div>
+                        <div class="col-md-3"></div><div class="col-md-6"><a href="javascript:;" class="add_address_manually">Enter your address manually</a></div><div class="col-md-3"></div>
+                    </div>
+                    <div class="form-group extra_add hide  mt-5">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right font-weight-bold"><label>Address 1</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="address1" id="address1" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right font-weight-bold"><label>Address 2</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="address2" id="address2" value="" class="form-control" ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right font-weight-bold"><label>Town/City</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="town" id="town" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide mb-3">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right font-weight-bold"><label>County</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="county" id="county" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide mb-5">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right font-weight-bold"><label>Postcode</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="postcode_box" id="postcode_box" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <!-- <div class="form-row">
+                    	<div class="col-md-12 text-center mb-3 font-weight-bold">Have you changed address in the last 3 months?</div>
+                    </div>-->
+                    <div class="form-row mt-5">
+                        <div class="col-md-3 font-weight-bold">Have you changed address in the last 3 months?</div>
+                            <div class="col-md-4">
+                                <div class="toggle">
+                                    <input type="radio" name="old_address_change" value="1" id="old_address_change_yes" class="yes_box"/>
+                                    <label for="old_address_change_yes">Yes</label>
+                                    <input type="radio" name="old_address_change" value="0" id="old_address_change_no" class="no_box"/>
+                                    <label for="old_address_change_no">No</label>
+                                </div>
+                           </div>
+                        <div class="col-md-5"></div>
+                    </div>
+                    <div class="form-group old_address hide mt-2">
+                    	<!--<div class="row form-group mb-3">
+                            <div class="col-md-3"></div><div class="col-md-6">Please enter your previous address here:</div><div class="col-md-3"></div>
+                        </div>-->
+                        <div class="row form-row mb-3">
+                            <div class="col-md-3 text-right"><label class=" font-weight-bold">Postcode</label></div>
+                            <div class="col-md-2">
+                                <input type="text" name="postcode_additional" id="postcode_additional" value="" class="form-control" required placeholder="Eg SO15 3EW">
+                                </div>
+                            <div class="col-md-2  text-right  no-padding">
+                                <button type="button" class="btn btn-success btn-sm find_address">Find address</button>
+                            </div>
+                            <div class="col-md-5"></div> 
+                            
+                        </div>
+                        <div class="row form-row mt-2 mb-3">
+                            <div class="col-md-3"></div><div class="col-md-6">Please enter your postcode and click 'Find address'.</div><div class="col-md-3"></div>
+                            <div class="col-md-3"></div><div class="col-md-5"><a href="javascript:;" class="add_old_address_manually">Enter your address manually</a></div><div class="col-md-4"></div>
+                        </div>
+                        
+                        <div class="form-group add_old_add_manually hide">
+                            <div class="row form-row mb-3">
+                                <div class="col-md-3 text-right font-weight-bold"><label>Address 1</label></div>
+                                <div class="col-md-4">
+                                    <input type="text" name="additional_address1" id="additional_address1" value="" class="form-control" required ></div>
+                                <div class="col-md-5"></div> 
+                            </div>
+                        </div>
+                        <div class="form-group add_old_add_manually hide">
+                            <div class="row form-row mb-3">
+                                <div class="col-md-3 text-right font-weight-bold"><label>Address 2</label></div>
+                                <div class="col-md-4">
+                                    <input type="text" name="additional_address2" id="additional_address2" value="" class="form-control" required ></div>
+                                <div class="col-md-5"></div> 
+                            </div>
+                        </div>
+                        <div class="form-group add_old_add_manually hide">
+                            <div class="row form-row mb-3">
+                                <div class="col-md-3 text-right font-weight-bold"><label>Town/City</label></div>
+                                <div class="col-md-4">
+                                    <input type="text" name="additional_town_city" id="additional_town_city" value="" class="form-control" required ></div>
+                                <div class="col-md-5"></div> 
+                            </div>
+                        </div>
+                        <div class="form-group add_old_add_manually hide  mb-3">
+                            <div class="row form-row mb-3">
+                                <div class="col-md-3 text-right font-weight-bold"><label>County</label></div>
+                                <div class="col-md-4">
+                                    <input type="text" name="additional_county" id="additional_county" value="" class="form-control" required ></div>
+                                <div class="col-md-5"></div> 
+                            </div>
+                        </div>  
+                        <div class="form-group add_old_add_manually hide  mb-5">
+                            <div class="row form-row mb-3">
+                                <div class="col-md-3 text-right font-weight-bold"><label>Postcode</label></div>
+                                <div class="col-md-4">
+                                    <input type="text" name="additional_postcode_box" id="additional_postcode_box" value="" class="form-control" required ></div>
+                                <div class="col-md-5"></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="form-group mt-5">
+                	<h3 class="use_data_title">How we will use your data</h3>
+                    <hr>
+                        <div class="col-md-12 no-padding use_data_content">
+                        <p>The information that you provide on this form will be held by Foresters Friendly Society for the purposes of providing a high quality customer experience and to keep you informed of products and services that may interest you. The ways in which we will use your data is laid out in our Privacy Policy. We will never share your data with any other companies for their marketing purposes.</p>
+                        <p>We will always respect your preferences as to the information you receive from us and we will tell you how you can opt out in every communication we send you. If you would like to opt out at any time, you can do so by calling 0800 783 4162, emailing <a href="mailto:memberservices@forestersfriendlysociety.co.uk">memberservices@forestersfriendlysociety.co.uk</a>, completing the online form or writing to us at: <strong>Foresters Friendly Society, 29-33 Shirley Road, Southampton SO15 3EW</strong></p>
+                        <p>Please note that we will always send you contractual information, such as your annual bonus statement.</p>
+                        <p>Where an application is made via a Financial Adviser (FA), you agree to your details being disclosed to that FA until you instruct us otherwise.</p>
+                     </div> 
+                     
+                     <div class="row form-row  mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>How did you hear about us?</label></div>
+                    <div class="col-md-4">
+                    <?=form_dropdown('HeardAboutUs',$list_how_did_you_hear_aboutus,'','class="form-control HeardAboutUs" placeholder="Please Select" id="HeardAboutUs"')?>
+                        
+                        <input type="text" name="HeardAboutUs_extra" id="HeardAboutUs_extra" value="" class="form-control hide mt-2 HeardAboutUs_extra" placeholder='Please enter Introducer number'>
+                    </div>
+                    <div class="col-md-5"></div> 
+                </div>
+                
+                <div class="row form-row  mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Offer code (Optional)</label></div>
+                    <div class="col-md-4">
+                       <input type="text" name="offer_code" id="offer_code" value="" class="form-control" maxlength="4"></div>
+                    <div class="col-md-5"></div> 
+                </div>
+                <?php if($type == "topup"){?>
+                <div class="row form-row  mb-3">
+                    <div class="col-md-3 text-right font-weight-bold"><label>Policy number</label></div>
+                    <div class="col-md-4">
+                       <input type="text" name="toptup_policy_number" id="toptup_policy_number" value="" class="form-control" maxlength="" required></div>
+                    <div class="col-md-5"></div> 
+                </div>
+                <?php }?>
+                 </div>  
+            </div> 
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+            	<button type="submit" name="continue" class="btn pull-right" id="next2" disabled="disabled" data-step="1">Continue</button>
+            </div>
+        </div>
+       
+            <div class="row progressbar mt-2">
+                <div class="col-md-12 bg-lightprogress">Payment Options</div>
+            </div> 
+            <div class="row progressbar">
+                <div class="col-md-12 bg-lightprogress">Summary</div>
+            </div>
+            <div class="row progressbar">
+                <div class="col-md-12 bg-lightprogress">Confirmation</div>
+            </div>
+             </form>
+        </section>
+       
+        <section id="payment_option_section" class="your_details hide">
+        <form name="frmpaymentoption" id="frmpaymentoption" action="" method="post">
+        <input type="hidden" name="data_type" value="payment_options">
+        <input type="hidden" name="step" value="2">
+        
+        <div class="row progressbar">
+            <div class="col-md-12 bg-limegreen">Your Details</div>
+        </div> 
+        <div class="row progressbar mb-2">
+            <div class="col-md-12 bg-limegreen">Payment Options</div>
+        </div>
+     	   <div class="row">
+        	<div class="col-md-12">
+            <h3>Payment options</h3>
+           
+            <hr>
+                 <h4>How would you like to add money to your Stocks & Shares ISA?</h4>
+                 <h4 class="mt-4">Please complete one or more of the expanding sections below.</h4>
+                <div class="row form-row  mb-3">
+                    <div class="col-md-12 font-weight-bold"><label for="monthly_payment" class="btn-payment-option">Set up a monthly payment by Direct Debit <input type="checkbox" id="monthly_payment" class="badgebox nisa_pay_option" name="choose_payment_option_monthly" value="1"><span class="badge">&plus;</span></label>
+                    </div>
+                </div>
+                 <div class="monthly_payment_box hide">
+                     <div class="row form-group">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="row form-row">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text font-weight-bold">How much would you like to invest?</span>
+                                    <span class="input-group-text">&pound;</span>
+                                  </div>
+                                  <input type="text" name="monthly_innvest_amount" id="monthly_innvest_amount" class="form-control required" placeholder="" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div> 
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="row form-row mt-3 mb-3">
+                        <div class="col-md-1">&nbsp;</div>
+                        <div class="col-md-9"><p>The monthly contribution that you can pay into your Stocks & Shares ISA is from &pound;50 up to &pound;333 in the current tax year.</p><label class="font-weight-bold">Please provide your bank account details:</label></div>
+                        <div class="col-md-2"></div> 
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5 font-weight-bold">
+                            <div class="form-container active">
+                                    <input placeholder="Account holder name" type="text" name="monthly_account_holder_name" id="monthly_account_holder_name"  class="form-control  mb-3  requried" requried  autocomplete='OFF' >
+                                    <input placeholder="Account number" type="text" name="monthly_account_number" id="monthly_account_number" class="form-control mb-3 requried account_number" requried autocomplete='OFF' maxlength="8">
+                                    <input placeholder="Sort code" type="text" name="monthly_account_sort_code" id="monthly_account_sort_code"  class="form-control  mt-2 mb-3 requried cvv_sort_code" requried  autocomplete='OFF'  maxlength="8">
+                            </div>
+                        </div>
+                        <div class="col-md-5"><!--<div class="card-wrapper"></div>--></div> 
+                    </div>
+                    <div class="row form-row mt-3 mb-1">
+                        <div class="col-md-1">&nbsp;</div>
+                        <div class="col-md-10"><label>Your first payment will be collected on or immediately after 1st <?=date("F Y", strtotime("+38 days"))?>.</label></div>
+                    </div>
+                    <div class="row form-row mb-1">
+                        <div class="col-md-1">&nbsp;</div>
+                        <div class="col-md-11"><label>All information relating to your Direct Debit will be confirmed in writing within 5 working days of your application.</label></div>
+                    </div>
+                    <div class="row form-row mb-1">
+                    <div class="col-md-1"></div>
+                        <div class="col-md-11"><label>Please note that this Direct Debit, whilst being set up online, will still be covered by the standard Direct Debit safeguards and guarantees under the Direct Debit Scheme.</label></div>
+                       
+                    </div>
+                    <div class="row form-row mb-1">
+                    <div class="col-md-1"></div>
+                        <div class="col-md-11"><label>By continuing, you confirm that you understand your monthly Direct Debit will be taken from this account on the 1st of each month and will appear on bank statements as 'Ancient Order of Foresters Friendly Society Ltd'.  Additionally, by continuing, you confirm this account is in your name, and you are the only signatory required to authorise payments from this account.</label></div>
+                    </div>
+                    
+                    
+                    <div class="row form-row mb-2">
+	                    <div class="col-md-1"></div>
+                        <div class="col-md-11 font-weight-bold text-left">
+                        <p><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="javascript:;">View and print the Direct Debit Guarantee &raquo;</a></p>
+                        </div>
+                    </div>
+                    
+                   </div>
+                
+                
+                <div class="row form-row  mb-3">
+                    <div class="col-md-12 font-weight-bold"><label for="lumpsum_payment" class="btn-payment-option">Make a lump sum payment by debit card <input type="checkbox" id="lumpsum_payment" class="badgebox nisa_pay_option" name="choose_payment_option_lumpsum" value="1"><span class="badge">&plus;</span></label>
+                    </div>
+                </div>
+                
+                <div class="lumpsum_payment_box hide">
+                    <div class="row form-group">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="row form-row">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text font-weight-bold">How much would you like to invest?</span>
+                                    <span class="input-group-text">&pound;</span>
+                                  </div>
+                                  <input type="text" name="lumpsum_innvest_amount" id="lumpsum_innvest_amount" class="form-control" placeholder="" required autocomplete="OFF">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div> 
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 mt-5"><p>The amount that you can pay into your Stocks & Shares ISA is from &pound;500 up to &pound;20,000 in the current tax year.<br>Your lump sum payment will be taken at the end of your application.</p></div>
+                    </div>
+                 </div>
+                <div class="row form-row  mb-3">
+                    <div class="col-md-12 font-weight-bold"><label for="transfer_payment" class="btn-payment-option">Make a transfer in from another ISA provider <input type="checkbox" id="transfer_payment" class="badgebox nisa_pay_option" name="choose_payment_option_transfer" value="1"><span class="badge">&plus;</span></label>
+                    </div>
+                </div>
+                
+                <div class="transfer_payment_box hide">
+                     <div class="row form-row">
+                        <div class="col-md-1"></div>
+                            <div class="col-md-5 font-weight-bold">
+                                <div class="form-container active">
+                                        <input placeholder="Name of existing provider" type="text" name="transfer_name_existing_provider"  class="form-control  mb-3  requried" requried autocomplete="OFF">
+                                </div>
+                            </div>
+                        	<div class="col-md-6"></div> 
+                    </div>
+                    
+                    <div class="row form-row mb-3">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 font-weight-bold">Please provide address of existing provider:</div>
+                    </div>
+                    <div class="row form-row mb-3">
+                    <div class="col-md-1"></div>
+                        <div class="col-md-1 text-left"><label class=" font-weight-bold">Postcode</label></div>
+                        <div class="col-md-2">
+                            <input type="text" name="transfer_postcode" id="transfer_postcode" value="" class="form-control required postcode" required  autocomplete="OFF" placeholder="Eg SO15 3EW">
+                            </div>
+                        <div class="col-md-2  text-right  no-padding">
+                            <button type="button" class="btn btn-success btn-sm find_address">Find address</button>
+                        </div>
+                        <div class="col-md-6"><span class="address-lines"></span></div> 
+                        
+                    </div>
+                    <div class="row form-row mb-5">
+                    	<div class="col-md-1"></div><div class="col-md-6">Please enter the provider's postcode and click find address.</div><div class="col-md-5"></div>
+                        <div class="col-md-1"></div><div class="col-md-6"><a href="javascript:;" class="add_address_manually">Enter address manually</a></div><div class="col-md-5"></div>
+                    </div>
+                    <div class="form-group extra_add hide  mt-5">
+                        <div class="row form-row mb-3">
+                             <div class="col-md-1"></div>
+                        	<div class="col-md-1 text-left font-weight-bold"><label>Address 1</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="transfer_address1" id="transfer_address1" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide">
+                        <div class="row form-row mb-3">
+                             <div class="col-md-1"></div>
+                        		<div class="col-md-1 text-left font-weight-bold"><label>Address 2</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="transfer_address2" id="transfer_address2" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-1"></div>
+                        <div class="col-md-1 text-left font-weight-bold"><label>Town/City</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="transfer_city" id="transfer_city" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide mb-3">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-1"></div>
+                        <div class="col-md-1 text-left font-weight-bold"><label>County</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="transfer_county" id="transfer_county" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="form-group extra_add hide mb-5">
+                        <div class="row form-row mb-3">
+                            <div class="col-md-1"></div>
+                        <div class="col-md-1 text-left font-weight-bold"><label>Postcode</label></div>
+                            <div class="col-md-4">
+                                <input type="text" name="transfer_postcode_box" id="transfer_postcode_box" value="" class="form-control" required ></div>
+                            <div class="col-md-5"></div> 
+                        </div>
+                	</div>
+                    <div class="row form-row">
+                        <div class="col-md-1"></div>
+                            <div class="col-md-5 font-weight-bold">
+                                <div class="form-container active">
+                                       <input placeholder="Account number" type="text" name="transfer_account_number" id="transfer_account_number" class="form-control mb-3 requried account_number" requried  maxlength="8">
+                                        <input placeholder="Sort code" type="text" name="transfer_accont_sort_code" id="transfer_accont_sort_code"  class="form-control mb-3 requried cvv_sort_code" requried  maxlength="8">
+                                        <input placeholder="Account reference (if applicable)" type="text" name="transfer_account_reference" id="transfer_account_reference"  class="form-control  mb-3">
+                                        
+                                </div>
+                            </div>
+                        	<div class="col-md-6"></div> 
+                    </div>
+                    <div class="row form-row mt-3 mb-2 ">
+                        <div class="col-md-1"></div>
+                            <div class="col-md-11 font-weight-bold">Type of ISA</div>
+                     </div>
+                     <div class="row form-row mt-2 mb-2">
+                     	<div class="col-md-1"></div>
+                        <div class="col-md-2">
+                               <label for="type_of_ISA_stock_shares" class="pay-transfer-option"><input type="radio" id="type_of_ISA_stock_shares" name="type_of_ISA" value="Stocks & Shares" class="badgebox type_of_ISA "><span class="badge">&check;</span>Stocks & Shares</label>
+                             
+                        </div>
+                        <div class="col-md-2 mb-2">
+                               <label for="type_of_ISA_cash" class="pay-transfer-option"><input type="radio" id="type_of_ISA_cash" name="type_of_ISA" value="Cash" class="badgebox type_of_ISA"><span class="badge">&check;</span>Cash</label>
+                             
+                        </div>
+                        <div class="col-md-2">
+                               <label for="type_of_ISA_help_to_buy" class="pay-transfer-option"><input type="radio" id="type_of_ISA_help_to_buy" name="type_of_ISA" value="Help To Buy" class="badgebox type_of_ISA"><span class="badge">&check;</span>Help To Buy</label>
+                             
+                        </div>
+                        <div class="col-md-2 mb-2">
+                               <label for="type_of_ISA_nisa" class="pay-transfer-option"><input type="radio" id="type_of_ISA_nisa" name="type_of_ISA" value="Stocks & Shares ISA" class="badgebox type_of_ISA"><span class="badge">&check;</span>Stocks & Shares ISA</label>
+                             
+                        </div>
+                    </div>
+                    <div class="row form-row mt-3 mb-2 hide hmrc_nisa_registration_number_box">
+                        	<div class="col-md-1">&nbsp;</div>
+                            <div class="col-md-5"><input placeholder="HMRC Stocks & Shares ISA Registration Number (if known)" type="text" name="hmrc_nisa_registration_number"  class="form-control  mb-3"></div>
+                            <div class="col-md-6"></div> 
+                    </div>
+                     
+                    <div class="row form-row mt-3 mb-2 ">
+                        <div class="col-md-1"></div>
+                            <div class="col-md-11">You can transfer all or part of an existing ISA to Foresters. If you have added funds to the ISA you are transferring in this tax year, please note under HM Revenue & Customs ISA regulations, only whole transfers of current tax year subscriptions can be accepted.</div>
+                         </div>
+                     <div class="row form-row mt-2 mb-2">
+                     	<div class="col-md-1"></div>
+                        <div class="col-md-2">
+                               <label for="full_transfer_option" class="pay-transfer-option"><input type="radio" id="full_transfer_option" name="payment_transfer_option" value="0" class="badgebox payment_transfer_option" checked><span class="badge">&check;</span>Full Transfer</label>
+                             
+                        </div>
+                        <div class="col-md-2 mb-2">
+                               <label for="part_transfer_option" class="pay-transfer-option"><input type="radio" id="part_transfer_option" name="payment_transfer_option" value="1" class="badgebox payment_transfer_option"><span class="badge">&check;</span>Part Transfer</label>
+                             
+                        </div>
+                    </div>
+                     <div class="row form-row mb-2">
+                            <div class="col-md-1">&nbsp;</div>
+                                <div class="col-md-5">
+                                <div class="input-group transfer_box">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text label-text">Approximate value</span>
+                                        <span class="input-group-text">&pound;</span>
+                                      </div>
+                                      <input type="text" name="full_transfer_amount" id="full_transfer_amount" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                               <div class="col-md-6 mt-2">The minimum transfer amount is £500</div>     
+                       </div>
+                       
+                        
+                 </div>
+                  
+            </div> 
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+            	<button type="submit" name="continue" class="btn pull-right" id="next3" disabled  data-step="2">Continue</button>
+                <button type="button" name="back" class="btn pull-left m-0 bg-light backbtn" data-step="1">Back</button>
+            </div>
+        </div>
+         
+            <div class="row progressbar mt-2">
+                <div class="col-md-12 bg-lightprogress">Summary</div>
+            </div>
+            <div class="row progressbar">
+                <div class="col-md-12 bg-lightprogress">Confirmation</div>
+            </div>
+        </form>
+        </section>
+        
+        <section id="summary_section" class="your_details hide">
+
+        <div class="row progressbar">
+            <div class="col-md-12 bg-limegreen">Your Details</div>
+        </div> 
+        <div class="row progressbar">
+            <div class="col-md-12 bg-limegreen">Payment Options</div>
+        </div> 
+        <div class="row progressbar mb-2">
+            <div class="col-md-12 bg-limegreen">Summary</div>
+        </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                <h3>Summary</h3>
+                
+                <hr>
+                     <h4>Please check your details. If you need to make changes, click 'Edit'. When you have finished, click 'Submit Application' to complete your application.</h4>
+                        
+                        <div class="mt-5 summarybox">
+                            <h4 class="summary_heading pull-left">Your details</h4>
+                           <a href="javascript:;" class="summary_edit btn btn-sm btn-warning edit_summary" data-type="personal_details" data-step="1"><i class="fa fa-pencil"></i> Edit</a>
+                            
+                        </div>
+                        <span class="edit_personal_section"></span>
+                        <div class="col-md-12 summary_personal_section"></div>
+                        <div class="mt-5 summarybox">
+                           <h4 class="summary_heading pull-left">Payment options</h4>
+                            	<a href="javascript:;" class="summary_edit btn btn-sm btn-warning edit_payment" data-type="payment_options" data-step="1"><i class="fa fa-pencil"></i> Edit</a>
+                            
+                        </div>
+                       <span class="edit_payment_options"></span>
+                        <div class="col-md-12 summary_payment_options"></div> 
+                    
+              </div> 
+              <form name="frmsummary" id="frmsummary" action="" method="post">
+                <input type="hidden" name="data_type" value="data_summary">
+                <input type="hidden" name="step" value="3">
+              		<div class="mt-5 mb-3">
+                        <div class="col-md-12">
+                            
+                               <label for="summary_accept_terms" class="btn-summary-terms font-weight-bold mt-1"><input type="checkbox" id="summary_accept_terms" name="summary_accept_terms" value="1" class="badgebox  required" required><span class="badge">&check;</span></label><p class="mt-2">By submitting this application, I confirm I have read and understood the <a href="javascript:;" class="view_declaration">declaration</a>, <a href="javascript:;" class="view_declaration">privacy policy</a> and the product information provided. I also confirm that I have read and understood the <a href="javascript:;" class="view_declaration">Important Information</a> and <a href="javascript:;" class="view_declaration">Key Information</a> Documents.</p>
+                             
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                   		 <div class="col-md-12">
+                            For your own benefit and protection you should read the declaration carefully before proceeding as this is Foresters Friendly Society’s standard client agreement upon which we intend to rely. If you do not understand any point please ask for further information.
+                        </div>
+                    </div>
+                    <div class="mt-3  mb-3 bg-light lumpsum_account_verify_text hide">
+                   		 <div class="col-md-12 	">
+                            <h4 class="font-weight-bold">Making your lump sum payment</h4>
+<p>Once you submit this form you will be redirected to the WorldPay secure website to make your payment. Please note that payment can only be made via debit card and the account must be in your name.</p>
+
+<p>Once your payment is confirmed, your nisa application will be submitted to Foresters Friendly Society.</p>
+
+
+                        </div>
+                    </div>
+                    
+            </div>  
+             
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <!--<button type="submit" name="continue" class="btn pull-right" id="next4" data-step="3">Submit Application</button>--> <button type="submit" name="continue" class="btn pull-right" id="next5">Submit Application</button><button type="button" name="back" class="btn pull-left m-0 bg-light backbtn"  data-step="2">Back</button>
+                </div>
+            </div>
+            
+            <div class="row progressbar m2-2">
+                <div class="col-md-12 bg-lightprogress">Confirmation</div>
+            </div>
+             </form>
+        </section> 
+       
+        <section id="lumpsum_payment_section" class="your_details hide">
+         <form name="frmlumpsum" id="frmlumpsum" action="" method="post">
+          <input type="hidden" name="data_type" value="payment_lumpsum">
+          <input type="hidden" name="step" value="4">
+            <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Your Details</div>
+            </div> 
+            <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Payment Options</div>
+            </div> 
+            <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Summary</div>
+            </div>
+             <div class="row progressbar mb-2">
+                <div class="col-md-12 bg-limegreen">Credit Card</div>
+            </div>
+     	   <div class="row">
+        	<div class="col-md-12">
+            <h3>Make a lump sum payment</h3>
+           
+            <hr>
+                 <h4>Please note that payment can only be made via debit card and the card must be in your name</h4>
+                
+               <div class="row form-row">
+               			<div class="col-md-4"></div>
+               			<div class="col-md-5"><div class="card-wrapper-payment"></div></div> 
+                        <div class="col-md-12 font-weight-bold mt-3">
+                            <div class="row form-container-payment active">
+                                    <div class="col-md-3"><label>Enter your card number</label></div>
+                                    <div class="col-md-5"><input id="lumpsum_card_number" placeholder="**** **** **** ****" type="tel" name="number" class="form-control mb-3 requried lumpsum_pay" requried autocomplete='OFF'></div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-3"><label>Enter your name as appear on card</label></div>
+                                    <div class="col-md-5"><input placeholder="Full Name" type="text"  name="name"  id="lumpsum_card_name"  class="form-control  mb-3  requried lumpsum_pay" requried  autocomplete='OFF'></div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-3"><label>Expiry date</label></div>
+                                    <div class="col-md-2"><input placeholder="MM/YY" type="text"  name="expiry"  id="lumpsum_card_expiry" class="form-control  mb-3  requried lumpsum_pay" requried  autocomplete='OFF' maxlength="7"></div>
+                                    <div class="col-md-1"><label>CVV</label></div>
+                                    <div class="col-md-2"><input placeholder="***" type="text"   name="cvc"  id="lumpsum_card_cvv" class="form-control mb-3 requried lumpsum_pay" requried  autocomplete='OFF'></div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-3"><label>Lump sum payment</label></div>
+                           			<div class="col-md-5 font-weight-bold"><label>&pound;350</label></div>
+                                    <div class="col-md-4"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+            </div> 
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+            	<button type="submit" name="continue" class="btn pull-right" id="next8" disabled>Submit Application</button><button type="button" name="back" class="btn pull-left m-0 bg-light backbtn"  data-step="3">Back</button>
+            </div>
+        </div>
+         <div class="row progressbar mt-2">
+                <div class="col-md-12 bg-lightprogress">Confirmation</div>
+          </div>
+          </form>
+        </section>
+        
+        <section id="confirmation_section" class="your_details hide">
+         <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Your Details</div>
+            </div> 
+            <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Payment Options</div>
+            </div> 
+            <div class="row progressbar">
+                <div class="col-md-12 bg-limegreen">Summary</div>
+            </div>
+            <div class="row progressbar mb-2">
+                <div class="col-md-12 bg-limegreen">Confirmation</div>
+            </div>
+     	   <div class="row">
+        	<div class="col-md-12">
+            <h3>Thank you</h3>
+           
+            <hr>
+                 <h4>Your Stocks & Shares ISA application has been submitted.</h4>
+                
+               <div class="row form-row">
+               			<div class="col-md-12 monthly_conf_text hide"><label>Your monthly contribution by Direct Debit has now been set up. The first payment will be collected on or around 1st <?=date("F Y", strtotime("+38 days"))?>.</label></div>
+                       <div class="col-md-12 lumpsum_conf_text hide"><p>Your lump sum payment has been received.</p></div>
+                       <div class="col-md-12 transfer_conf_text hide"><p>Your transfer request has been received. We will contact you when this is completed, or if we need any further information. </p></div>
+                       
+                       <div class="col-md-12"><p><strong>Reference number: <span id="customer_ref_number">FFS1023702</span></strong><br>
+
+This reference number will be emailed to you but you can also print this page. Please quote this reference number whenever you talk to us about your Stocks & Shares ISA.<br><br>
+
+<strong>What happens next?</strong><br>
+
+You will receive your Stocks & Shares ISA pack in the post within 5 working days. Please keep it in a safe place.<br><br>
+
+
+If you have any questions, please contact our Member Services team:<br>
+
+Email: <a href="mailto:memberservices@forestersfriendlysociety.co.uk">memberservices@forestersfriendlysociety.co.uk</a><br>
+
+Telephone: 0800 988 2418<br><br>
+
+<strong>Or write to:</strong><br>
+
+Foresters Friendly Society<br>Foresters House<br>29/33 Shirley Road<br>Southampton<br>SO15 3EW<br><br>
+
+Thank you for choosing us as the provider of your Stocks & Shares ISA.<br>
+
+<a href="https://www.forestersfriendlysociety.co.uk/foresters-customers/foresters-extras" target="_blank">Now you’re a member, don’t forget about your free member benefits</a> </p></div>
+                        
+                    </div>
+            </div> 
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+            	<a href="<?=base_url('nisa/close_application')?>" class="btn pull-right closebtn">Close this window</a>
+            </div>
+        </div>
+        </section>
+        
+    </div>

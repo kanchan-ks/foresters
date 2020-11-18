@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!--<script type="text/javascript" src="afd.jquery.1.9.0.min.js"></script>-->
+  <script type="text/javascript" src="afd.typeahead.jquery.1.9.0.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="jquery.typeahead.afd.css">
+  <script>
+    afdOptions = {
+    id: "1757",
+    token: "+aE2pGiR7oRpArZdgmqlz7EOHhxBWitByjEHO+d9Rzg=ht",
+	pceUrl: "http://apps.afd.co.uk/json",
+  };
+  
+  </script>
+  <style>
+    .afd-typeahead-list{max-height: 185px;overflow: auto;}
+  </style>
+<head>
+<body>
+<div id="new_address"> 
+      <div class="afd-typeahead-container">
+              <input
+                type="search"
+                autocomplete="off"
+                data-afd-control="typeahead">
+        </div>
+        
+        <div class="row">
+          <div class="col-8 afd-form-control">
+            <ul class="custom-select" data-afd-control="lookupResultsList"></ul>
+          </div>
+		</div>
+        <div class="form-control">
+          <label for="Organisation">Organisation:</label>
+          <input data-afd-result="Organisation" id="organisation"><br>
+          
+          <label for="Street">Street:</label>
+          <input data-afd-result="Street" id="street"><br>
+          
+          <label for="Locality">Locality:</label>
+          <input data-afd-result="Locality" id="locality"><br>
+          
+          <label for="Town">Town:</label>
+          <input data-afd-result="Town" id="town"><br>
+          
+          <label for="Town">County:</label>
+          <input data-afd-result="TraditionalCounty" id="county"><br>
+          
+            <label for="Postcode">Postcode:</label>
+          <input data-afd-result="Postcode" id="postcode"><br>
+          
+        
+        </div>
+</div>
+
+
+<div id="old_address">    
+        <div class="afd-typeahead-container">
+              <input
+                type="search"
+                autocomplete="off"
+                data-afd-control="typeahead">
+        </div>
+        <div class="row">
+          <div class="col-8 afd-form-control">
+            <ul class="custom-select" data-afd-control="lookupResultsList"></ul>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="Organisation">Organisation:</label>
+          <input data-afd-result="Organisation" id="organisation"><br>
+          
+          <label for="Street">Street:</label>
+          <input data-afd-result="Street" id="street"><br>
+          
+          <label for="Locality">Locality:</label>
+          <input data-afd-result="Locality" id="locality"><br>
+          
+          <label for="Town">Town:</label>
+          <input data-afd-result="Town" id="town"><br>
+          
+          <label for="Town">County:</label>
+          <input data-afd-result="TraditionalCounty" id="county"><br>
+          
+            <label for="Postcode">Postcode:</label>
+          <input data-afd-result="Postcode" id="postcode"><br>
+          
+        
+        </div>
+  </div>  
+
+</body>

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="afd.jquery.1.9.2.min.js"></script>
+  
+<script type="text/javascript">
+afdOptions = {
+  pceUrl: typeof pceUrl === 'undefined' ? 'https://apps.afd.co.uk/json' : pceUrl,
+		id: "1757",
+		token: "+aE2pGiR7oRpArZdgmqlz7EOHhxBWitByjEHO+d9Rzg=ht",
+        nativeValidationMessages: false,       
+		typeahead: {
+            maxItems: 5,
+            pushUp: false,
+            afterHideTypeahead: false,
+            searchAgain: true,
+            afterClearTypeahead:  true,
+            beforeHideResults: false,
+            manualInputButton: false,
+            fewResultsManualInput: true,
+            fewResultsManualInputText: 'Can\'t see your address? Enter it manually',
+            hideEmpties: false,
+            minLength: 2,
+            matchPositions: false,
+            postcodeFirst: true,
+            parentClass: 'afd-input-group',
+            enableReverseGeocode: false,
+			
+        },
+        lookup: {
+            prefetch: true,
+            pushUp:false,
+            parentClass: 'afd-input-group',
+            hideEmpties: false,
+            beforeHideResults: false,
+            afterRetrieveHideResultsList: true,
+            manualInputButton: false,
+            postcodeFirst: true,
+			containers: ['#New','#Old']
+        }
+};
+</script>
+  
+  <link rel='stylesheet' type='text/css' href='jquery.typeahead.afd.css'>
+ </head>
+
+ <body>
+ 
+<div id="content" class="container">
+		
+<h1 id="postcode-plus-multiple-forms-demo">Postcode Plus Multiple Forms Demo</h1>
+<div class="row">
+
+	<div class="col-sm-6" id="New">
+       <div class="afd-form-control" >
+        <input class="form-control" data-afd-control="lookupField" id="lookup-field" placeholder="Postcode Lookup">
+            <div class="input-group-append">
+              <button class="btn" data-afd-control="lookupButton">Lookup</button>
+            </div>
+            <div class="afd-manual-input-search-button" style="display:none">Address Search</div>
+            <div class="afd-manual-input-button" style="display:none">Manual Input</div>
+      </div>
+
+
+      <div class="col-8 afd-form-control">
+        <select class="custom-select" data-afd-control="lookupResultsList"></select>
+      </div>
+
+
+    <div class="form-control">
+      <label for="Postcode">Postcode:</label>
+      <input data-afd-result="Postcode" id="postcode"><br>
+      
+      <label for="Street">Street:</label>
+      <input data-afd-result="Street" id="street"><br>
+      
+      <label for="Locality">Locality:</label>
+      <input data-afd-result="Locality" id="locality"><br>
+      
+      <label for="Town">Town:</label>
+      <input data-afd-result="Town" id="town"><br>
+      
+      <label for="DPS">DPS:</label>
+      <input data-afd-result="DPS" id="dps"><br>
+    </div>
+</div>
+
+<div class="col-sm-6" id="Old">
+        <div class="afd-form-control">
+       		<input class="form-control" data-afd-control="lookupField" id="lookup-field" placeholder="Postcode Lookup">
+            <div class="input-group-append">
+              <button class="btn" data-afd-control="lookupButton">Lookup</button>
+            </div>
+            <div class="afd-manual-input-search-button" style="display:none">Address Search</div>
+            <div class="afd-manual-input-button" style="display:none">Manual Input</div>
+        </div>
+
+      <div class="col-8 afd-form-control" >
+        <select class="custom-select" data-afd-control="lookupResultsList"></select>
+      </div>
+
+
+        <div class="form-control">
+          <label for="Postcode">Postcode:</label>
+          <input data-afd-result="Postcode" id="postcode_addition"><br>
+          
+          <label for="Street">Street:</label>
+          <input data-afd-result="Street" id="street_addition"><br>
+          
+          <label for="Locality">Locality:</label>
+          <input data-afd-result="Locality" id="locality_addition"><br>
+          
+          <label for="Town">Town:</label>
+          <input data-afd-result="Town" id="town_addition"><br>
+          
+          <label for="DPS">DPS:</label>
+          <input data-afd-result="DPS" id="dps_addition"><br>
+        </div>
+</div>
+
+
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

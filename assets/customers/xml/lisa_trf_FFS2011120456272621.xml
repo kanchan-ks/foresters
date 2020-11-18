@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+				<ForestersForms>
+					<Forms_LISAApplications>
+					<Form id="110173" forestersid="FFS2011120456272621" createdate="12/11/2020 04:56:27">
+									<returnState>0</returnState>
+									<ID>110173</ID>	
+									<Title>Mr</Title>
+									<Forename>Kanchan</Forename>
+									<Surname>Sinha</Surname>
+									<DOB>05/05/1996 12:00:00</DOB>
+									<NationalInsuranceNumber>DF343443A</NationalInsuranceNumber>
+									<AddressLine1>6 Foresters Avenue</AddressLine1>
+									<AddressLine2></AddressLine2>
+									<Town>Aberdeen</Town>
+									<County>Aberdeenshire</County>
+									<Country>GB</Country>
+									<Postcode>AB21 9JB</Postcode>
+									<PhoneDay>23423 423423</PhoneDay>
+									<Email>kanchan@sigam.co.uk</Email>
+									<PrevAddressLine1>1234 Pershore Road</PrevAddressLine1>
+									<PrevAddressLine2></PrevAddressLine2>
+									<PrevTown>Aberdeen</PrevTown>
+									<PrevCounty>Worcestershire</PrevCounty>
+									<PrevPostcode>B30 2YA</PrevPostcode>
+									<MembershipType>LISA</MembershipType>
+									<HearAbout>Search Engine</HearAbout>
+									<PromotionalCode></PromotionalCode>
+									<TransferPaymentOption>Transfer in from another ISA provider</TransferPaymentOption>
+										<TransferPaymentOptionSelected>Yes</TransferPaymentOptionSelected>
+											
+									<ReceivePostFromUs>Opt out</ReceivePostFromUs>
+									<ReceiveEmailFromUs>Opt out</ReceiveEmailFromUs>
+									<ReceiveSMSFromUs>Opt out</ReceiveSMSFromUs>
+									<ReceivePhoneFromUs>Opt out</ReceivePhoneFromUs>
+									<SUN>915649</SUN>
+									<AffiliateID></AffiliateID>
+									</Form>
+					</Forms_LISAApplications>
+				</ForestersForms>

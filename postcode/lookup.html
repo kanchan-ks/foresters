@@ -1,0 +1,64 @@
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="afd.jquery.1.9.0.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="jquery.typeahead.afd.css">
+   
+  <script>
+    afdOptions = {
+    id: "1757",
+    token: "+aE2pGiR7oRpArZdgmqlz7EOHhxBWitByjEHO+d9Rzg=ht",
+	pceUrl: "https://apps.afd.co.uk/json"
+  };
+  </script>
+ </head>
+
+ <body>
+ 
+ 
+<div class="row">
+  <div class="input-group col-md-4 afd-form-control">
+    <input class="form-control" data-afd-control="lookupField" id="lookup-field" placeholder="Postcode Lookup">
+    <div class="input-group-append">
+      <button class="btn" data-afd-control="lookupButton">Lookup</button>
+    </div>
+    <div class="afd-manual-input-search-button" style="display:none">Address Search</div>
+    <div class="afd-manual-input-button" style="display:none">Manual Input</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 afd-form-control">
+    <select class="custom-select" data-afd-control="lookupResultsList"></select>
+  </div>
+</div>
+
+
+<div class="form-control">
+  <label for="Postcode">Postcode:</label>
+  <input data-afd-result="Postcode" id="postcode"><br>
+  
+  <label for="Street">Street:</label>
+  <input data-afd-result="Street" id="street"><br>
+  
+  <label for="Locality">Locality:</label>
+  <input data-afd-result="Locality" id="locality"><br>
+  
+  <label for="Town">Town:</label>
+  <input data-afd-result="Town" id="town"><br>
+  
+  <label for="DPS">DPS:</label>
+  <input data-afd-result="DPS" id="dps"><br>
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+

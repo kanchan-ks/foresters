@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="afd.account.jquery.1.9.0.min.js"></script>
+  
+  <script>
+    afdOptions = {
+    id: "1757",
+    token: "+aE2pGiR7oRpArZdgmqlz7EOHhxBWitByjEHO+d9Rzg=ht",
+	pceUrl: "http://apps.afd.co.uk/json",
+  };
+  </script>
+  
+  <link rel='stylesheet' type='text/css' href='jquery.typeahead.afd.css'>
+  <style>
+  .afd-loading > :before, .afd-loading > :after {
+  top: 3.5em;
+  right: 1em;
+}
+</style>
+ </head>
+
+ <body>
+ 
+ 
+<div class="form-control">
+  <label for="account">Account Number:</label>
+  <input data-afd-control="account" id="account">
+  <p id="account-error-message"></p>
+</div>
+<div class="form-control">
+  <label for="sort">Sort Code:</label>
+  <input data-afd-control="sort" id="sort">
+  <p id="sort-error-message"></p>
+</div>
+<script>
+  $(document).on("afd:accountValidationUpdated", function(e, accountElement, sortElement){
+    if(!accountElement.validity.valid){
+      $("#account-error-message").html(accountElement.validationMessage);
+    }else{
+      $("#account-error-message").html("");
+    };
+  if(!sortElement.validity.valid){
+      $("#sort-error-message").html(sortElement.validationMessage);
+    }else{
+      $("#sort-error-message").html("");
+    };
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

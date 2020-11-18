@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="afd.jquery.1.9.0.min.js"></script>
+  <script>
+    afdOptions = {
+    id: "1757",
+    token: "+aE2pGiR7oRpArZdgmqlz7EOHhxBWitByjEHO+d9Rzg=ht",
+	pceUrl: "https://apps.afd.co.uk/json"
+  };
+  </script>
+  <link type="text/css" rel="stylesheet" href="jquery.typeahead.afd.css">
+  <style>
+    .afd-typeahead-list{max-height: 185px;overflow: auto;}
+  </style>
+<head>
+<body>
+  <div class="row">
+  <div class="input-group col-md-4 afd-form-control">
+    <input class="form-control" data-afd-control="lookupField" id="lookup-field" placeholder="Postcode Lookup">
+    <div class="input-group-append">
+      <button class="btn" data-afd-control="lookupButton">Lookup</button>
+    </div>
+    <div class="afd-manual-input-search-button" style="display:none">Address Search</div>
+    <div class="afd-manual-input-button" style="display:none">Manual Input</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 afd-form-control">
+    <ul class="custom-select" data-afd-control="lookupResultsList"></ul>
+  </div>
+</div>
+</body>
