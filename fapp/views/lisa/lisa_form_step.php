@@ -84,7 +84,7 @@ if(get_session('set_topup') == true)
                 <?php if(get_session('set_topup') == false){?>
                 <div class="row form-row mb-3">
                     <div class="col-lg-4 text-right font-weight-bold"><label>National Insurance number</label></div>
-                    <div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF"> <input type="text" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment required ni-segment-last float-right" autocomplete="OFF" required></div>
+                    <div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" pattern="\d*" maxlength="2" class="form-control ni-segment"  autocomplete="OFF"> <input type="number" name="NI2" id="NI2" maxlength="2" pattern="\d*" class="form-control ni-segment" autocomplete="OFF"> <input pattern="\d*" type="number" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="number" pattern="\d*" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment required ni-segment-last float-right" autocomplete="OFF" required></div>
                     <div class="col-lg-4"></div> 
                 </div>
                 <?php }?>

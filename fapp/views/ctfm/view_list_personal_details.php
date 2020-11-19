@@ -94,7 +94,7 @@ if(isset($personal_details->ni_number)){
                 	<hr>
 					<div class="row form-row mb-3">
 						<div class="col-lg-4 text-left text-lg-right font-weight-bold"><label>National Insurance number</label></div>
-						<div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF" value=""> <input type="text" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="text" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="text" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment ni-segment-last" autocomplete="OFF" value=""></div>
+						<div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF" value=""> <input type="number" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="number" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="number" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF" value=""> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment ni-segment-last" autocomplete="OFF" value=""></div>
 						<div class="col-lg-4"></div> 
 					</div>
 					<div class="row form-row mb-3">

@@ -62,5 +62,13 @@ label.error{ color:#FF0000; width:100%; font-size:15px;}
 
   #user_bob .select2-container{ width:32.6%;}
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type=number] {
+    -moz-appearance:textfield; 
+}
   

@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 	<?php }?>
                 <div class="row form-row mb-3 <?php if(get_session('valid_child_dob')==false){ echo "hide";}?> child_nin">
                     <div class="col-lg-4 text-lg-right text-left font-weight-bold"><label>National Insurance number</label></div>
-                    <div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF"> <input type="text" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment ni-segment-last" autocomplete="OFF"></div>
+                    <div class="col-lg-4 d-flex d-lg-flex justify-content-between flex-wrap"><input type="text" name="NI1" id="NI1" maxlength="2" class="form-control ni-segment"  autocomplete="OFF"> <input type="number" name="NI2" id="NI2" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="number" name="NI3" id="NI3" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="number" name="NI4" id="NI4" maxlength="2" class="form-control ni-segment" autocomplete="OFF"> <input type="text" name="NI5" id="NI5" maxlength="1" class="form-control ni-segment ni-segment-last" autocomplete="OFF"></div>
                     <div class="col-lg-4"></div> 
                 </div>
                 

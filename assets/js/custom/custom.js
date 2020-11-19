@@ -609,7 +609,7 @@ function niValidation() {
             return false;
         });
 
-        $('body').on('keyup', '#NI1', function (e) {
+        $('body').on('keypress keyup', '#NI1', function (e) {
             switch (e.keyCode) {
                 case 9:
                 case 16:
@@ -621,7 +621,7 @@ function niValidation() {
                     break;
             }
         });
-        $('body').on('keyup', '#NI2', function (e) {
+        $('body').on('keypress keyup', '#NI2', function (e) {
             switch (e.keyCode) {
                 case 9:
                 case 16:
@@ -633,7 +633,7 @@ function niValidation() {
                     break;
             }
         });
-        $('body').on('keyup', '#NI3', function (e) {
+        $('body').on('keypress keyup', '#NI3', function (e) {
             switch (e.keyCode) {
                 case 9:
                 case 16:
@@ -645,7 +645,7 @@ function niValidation() {
                     break;
             }
         });
-        $('body').on('keyup', '#NI4', function (e) {
+        $('body').on('keypress keyup', '#NI4', function (e) {
             switch (e.keyCode) {
                 case 9:
                 case 16:
@@ -658,7 +658,7 @@ function niValidation() {
             }
         });
 
-        $('body').on('keypress', '#NI5', function (e) {
+        $('body').on('keypress keyup', '#NI5', function (e) {
             e = e || window.event;
             var charCode = typeof e.which === "undefined" ? e.keyCode : e.which;
             var charStr = String.fromCharCode(charCode);
