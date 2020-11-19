@@ -486,7 +486,7 @@ class Lisa extends CI_Controller {
 				sendEmailtoCustomer($personal_details['email'], $body, "Your LISA $heading has been submitted");
 				
 				sendEmailtoAdmin(ADMIN_EMAIL, $body, "New online product $heading (Lifetime ISA)");
-
+die;
 				$this->output->set_content_type('application/json')->set_output(json_encode(array('status'=>true, 'data' => $data)));
 			}
 		}else{
